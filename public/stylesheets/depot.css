@@ -75,6 +75,7 @@
 #store  .title {
   font-size: 120%;
   font-family: sans-serif;
+
 }
 
 #store .entry img {
@@ -152,3 +153,7 @@
   font-size: small;
 }
 /* END:mainlayout */
+
+#store .entry form, #store .entry form div {
+  display: inline
+}
