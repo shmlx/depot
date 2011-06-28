@@ -83,8 +83,24 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       #format.html { redirect_to(@line_item.cart, :notice => 'Item removed from cart.') }
       format.html { redirect_to(store_url) }
-      format.js { }
+      format.js   { }
       format.xml  { head :ok }
     end
   end
+
+  def decrement
+    @line_item = LineItem.find(params[:id])    
+    if @line_item.quantity > 1
+      @line_item.decrement(:quantity)
+    else
+      @line_item.destroy
+    end
+    @line_item.save
+
+    respond_to do |format|
+      format.html { redirect_to store_path }
+      format.js { @cart = current_cart }
+    end
+  end  
+
 end

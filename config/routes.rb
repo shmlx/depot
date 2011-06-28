@@ -1,4 +1,7 @@
 Depot::Application.routes.draw do
+
+  match "line_items/decrement", :to=> 'line_items#decrement', :method=>:post
+
   resources :line_items
 
   resources :carts
