@@ -16,9 +16,14 @@
   </div>
   <div id="columns">
     <div id="side" style="color: #fff">
+      <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+          <%= render @cart %>
+        <% end %>
+      <% end %>
       <%= link_to 'Home', :store %><br />
       <% if session[:cart_id] %>
-        <%= link_to 'Cart', cart_url(session[:cart_id]) %> (<%= number_to_currency(current_cart_price) %>)<br />
+        <!--<%= link_to 'Cart', cart_url(session[:cart_id]) %> (<%= number_to_currency(current_cart_price) %>)<br />-->
       <% end %>
       <p>The time is now <%= l Time.now %></p>
     </div>
