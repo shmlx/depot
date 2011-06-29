@@ -1,0 +1,22 @@
+<div id="order_list">
+  <h1>Who bought <%= @product.title %></h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>E-Mail</th>
+      <th>Payment method</th>
+      <th>Date</th>
+    </tr>
+    <% @product.orders.each do |order| %>
+    <tr>
+      <th><%= order.name %></th>
+      <th><%= order.address %></th>
+      <th><%= order.email %></th>
+      <th><%= order.pay_type %></th>
+      <th><%= l order.created_at %></th>
+    </tr>
+    <% end %>
+  </table>
+</div>
+

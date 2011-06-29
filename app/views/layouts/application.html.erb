@@ -22,9 +22,6 @@
         <% end %>
       <% end %>
       <%= link_to 'Home', :store %><br />
-      <% if session[:cart_id] %>
-        <!--<%= link_to 'Cart', cart_url(session[:cart_id]) %> (<%= number_to_currency(current_cart_price) %>)<br />-->
-      <% end %>
       <p>The time is now <%= l Time.now %></p>
     </div>
     <div id="main">
