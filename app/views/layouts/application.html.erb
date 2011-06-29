@@ -25,9 +25,6 @@
       <p>The time is now <%= l Time.now %></p>
     </div>
     <div id="main">
-      <% if notice %>
-        <p id="notice"><%= flash[:notice] %></p>
-      <% end %>
       <%= yield %><!-- <label id="code.depot.e.include"/> -->
     </div>
   </div>
