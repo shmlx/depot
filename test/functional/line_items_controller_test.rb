@@ -44,7 +44,7 @@ class LineItemsControllerTest < ActionController::TestCase
       delete :destroy, :id => @line_item.to_param
     end
 
-    assert_redirected_to line_items_path
+    assert_redirected_to store_url
   end
 
 
