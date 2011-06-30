@@ -1,0 +1,62 @@
+lv:
+  thanks:              "Paldies par pasūtījumu"
+  number:
+    currency:
+      format:
+        unit:          "Ls "
+        precision:      2
+        separator:      "."
+        delimiter:      ","
+        format:         "%u%n"
+  time:
+    formats:
+      default:          "%Y/%m/%d %H:%M"
+      short:            "%b %d"
+      long:             "%B %d, %Y"
+  layouts:
+    application:
+      title:            "Pragmatic Grāmatu plaukts"
+      home:             "Sākums"
+      questions:        "Jautājumi"
+      news:             "Ziņas"
+      contact:          "Kontakti"
+  store:
+    index:
+      title_html:      "Jūsu Pragmatic Katalogs"
+      add_html:        "Pievienot grozam"
+  carts:
+    cart:
+      title:           "Jūsu grozs"
+      empty:           "Iztukšot grozu"
+      checkout:        "Pasūtīt produktus"
+  orders:
+    new:
+      legend:          "Ievadiet Savus Datus"
+    form:
+      name:            "Vārds"
+      address_html:    "Adrese"
+      email:           "E-pasta adrese"
+      pay_type:        "Apmaksāt ar"
+      pay_prompt_html: "Izvēlieties apmaksas metodi"
+      submit:          "Pasūtīt"
+
+  activerecord:
+    models:
+      order:            "Pasutījums"
+    attributes:
+      order:
+        address:        "Adrese"
+        name:           "Vārds"
+        email:          "E-pasta adrese"
+        pay_type:       "Apmaksas metode"
+    errors:
+      messages:
+        inclusion:      "nav izvēlēta"
+        blank:          "nav ievadīts"
+  errors:
+    template:
+      body:             "Tika fiksētas sekojošas kļūdas:"
+      header:
+        one:            "1 kļūda neļāva saglabāt formu"
+        other:          "%{count} kļūdas neļāva saglabāt formu"
+

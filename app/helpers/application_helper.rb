@@ -11,4 +11,8 @@ module ApplicationHelper
     content_tag("div", attributes, &block)
   end
 
+  def convert_price_to_lvl(product_price)
+    product_price *= 0.489
+  end
+
 end

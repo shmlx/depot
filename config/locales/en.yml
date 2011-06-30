@@ -1,13 +1,41 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   hello: "Hello world"
-
-en:
+  number:
+    currency:
+      format:
+        unit:         "$"
+        precision:      2
+        separator:     "."
+        delimiter:     ","
+        format:        "%u%n"
   time:
     formats:
-      default: "%Y/%m/%d %H:%M"
-      short: "%b %d"
-      long: "%B %d, %Y"
-
+      default:         "%Y/%m/%d %H:%M"
+      short:           "%b %d"
+      long:            "%B %d, %Y"
+  layouts:
+    application:
+      title:           "Pragmatic Bookshelf"
+      home:            "Home"
+      questions:       "Questions"
+      news:            "News"
+      contact:         "Contact"
+  store:
+    index:
+      title_html:      "Your <strong>Pragmatic</strong> Catalog"
+      add_html:        "Add to Cart"
+  carts:
+    cart:
+      title:           "Your Cart"
+      empty:           "Empty cart"
+      checkout:        "Checkout"
+  orders:
+    new:
+      legend:          "Please Enter Your Details"
+    form:
+      name:            "Name"
+      address_html:    "Address"
+      email:           "E-mail"
+      pay_type:        "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit:          "Place Order"
