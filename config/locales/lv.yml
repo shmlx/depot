@@ -29,6 +29,11 @@ lv:
       title:           "Jūsu grozs"
       empty:           "Iztukšot grozu"
       checkout:        "Pasūtīt produktus"
+  order:
+    payment_types:
+      credit_card:      "Kredītkarte"
+      cheque:           "Čeks"
+      purchase_order:   "Pirkuma pasutījums"
   orders:
     new:
       legend:          "Ievadiet Savus Datus"
@@ -36,7 +41,7 @@ lv:
       name:            "Vārds"
       address_html:    "Adrese"
       email:           "E-pasta adrese"
-      pay_type:        "Apmaksāt ar"
+      pay_type:        "Apmaksas metode"
       pay_prompt_html: "Izvēlieties apmaksas metodi"
       submit:          "Pasūtīt"
 

@@ -19,6 +19,7 @@
 
       <td class="list_actions">
         <%= link_to 'Show', product %><br/>
+        <%= link_to 'Show orders', :action => "who_bought", :id => product.id %><br/>
         <%= link_to 'Edit', edit_product_path(product) %><br/>
         <%= link_to 'Destroy', product, 
                     :confirm => 'Are you sure?',

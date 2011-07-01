@@ -11,8 +11,9 @@ module ApplicationHelper
     content_tag("div", attributes, &block)
   end
 
-  def convert_price_to_lvl(product_price)
-    product_price *= 0.489
+  def convert_price(product_price)
+    product_price *= 0.489 if I18n.locale.to_s == 'lv'
+    number_to_currency(product_price) 
   end
 
 end

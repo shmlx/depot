@@ -1,5 +1,6 @@
 en:
-  hello: "Hello world"
+  thanks:              "Paldies par pasūtījumu"
+  hello:               "Hello world"
   number:
     currency:
       format:
@@ -29,6 +30,11 @@ en:
       title:           "Your Cart"
       empty:           "Empty cart"
       checkout:        "Checkout"
+  order:
+    payment_types:
+      credit_card:      "Credit Card"
+      cheque:           "Cheque"
+      purchase_order:   "Purchase Order"
   orders:
     new:
       legend:          "Please Enter Your Details"

@@ -15,6 +15,13 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    
+    # Pārbauda vai katram produktam tiek attēloti 4 action linki (show, show orders, edit, destroy)
+    assert_select '.list_actions' do |elements|
+      elements.each do |element|
+        assert_select element, "a", 4
+      end
+    end
   end
 
   test "should get new" do

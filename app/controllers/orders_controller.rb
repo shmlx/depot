@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   skip_before_filter :authorize, :only => [:new, :create]
 
+
   # GET /orders
   # GET /orders.xml
   def index
@@ -28,6 +29,7 @@ class OrdersController < ApplicationController
   # GET /orders/new.xml
   def new
     @cart = current_cart
+    @pay_types = PayType.all
     if @cart.line_items.empty?
       redirect_to store_url, :notice => "Your cart is empty"
       return
@@ -48,6 +50,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.xml
   def create
+    @pay_types = PayType.all
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
 
@@ -69,6 +72,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1.xml
   def update
     @order = Order.find(params[:id])
+    @pay_types = PayType.all
 
     respond_to do |format|
       if @order.update_attributes(params[:order])

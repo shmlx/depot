@@ -45,3 +45,10 @@ Product.create(:title => 'Rails Test Prescriptions',
       </p>},
   :image_url => '/images/rtp.jpg',
   :price => 43.75)
+
+PayType.delete_all
+PayType.create(:name => 'check')
+PayType.create(:name => 'cc')
+PayType.create(:name => 'po')
+
+
